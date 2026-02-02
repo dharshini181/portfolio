@@ -1,0 +1,96 @@
+.logoloop {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+}
+
+.logoloop--vertical {
+    height: 100%;
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%);
+}
+
+.logoloop__track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+}
+
+.logoloop--vertical .logoloop__track {
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+}
+
+.logoloop__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: var(--logoloop-gap, 40px);
+    padding-right: var(--logoloop-gap, 40px);
+}
+
+.logoloop--vertical .logoloop__list {
+    flex-direction: column;
+    padding-right: 0;
+    padding-bottom: var(--logoloop-gap, 32px);
+}
+
+.logoloop__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logoloop__item img,
+.logoloop__node {
+    height: var(--logoloop-logoHeight, 60px);
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.logoloop__item:hover img,
+.logoloop__item:hover .logoloop__node {
+    transform: scale(1.15);
+}
+
+.logoloop__node {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    color: #a855f7;
+}
+
+.logoloop__link {
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.logoloop--scale-hover .logoloop__link:hover {
+    transform: scale(1.1);
+}

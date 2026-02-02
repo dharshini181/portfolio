@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dharshini E | Portfolio - Reference</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#8b3dff;
+  --secondary:#ff65d8;
+  --dark:#132238;
+  --grey:#5f6c7b;
+  --white:#ffffff;
+  --shadow:0 25px 70px rgba(0,0,0,0.12);
+  --light-purple:#f3eaff;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:#f7f8fc;
+  color:var(--dark);
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+
+/* NAVBAR */
+header{
+  position:sticky;top:0;
+  background:#fff;border-bottom:1px solid #eee;
+  z-index:100;
+}
+.nav{
+  max-width:1200px;margin:auto;
+  display:flex;justify-content:center;
+  gap:36px;padding:20px;
+}
+.nav a{font-weight:500}
+.nav a:hover{color:var(--primary)}
+.contact-btn{
+  background:var(--primary);
+  color:#fff;padding:8px 18px;
+  border-radius:6px;
+}
+
+/* HERO (3 lines only) */
+.hero{
+  text-align:center;
+  padding:150px 20px 170px;
+  background:radial-gradient(circle at top right,#ecdfff,#fff 65%);
+}
+.hero h1{
+  font-size:56px;font-weight:700;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  max-width:760px;
+  margin:18px auto;
+  font-size:18px;
+  color:var(--grey);
+}
+.hero .btn{
+  margin-top:20px;
+  background:var(--primary);
+  color:#fff;
+  padding:14px 34px;
+  border-radius:6px;
+  font-weight:500;
+}
+
+/* ABOUT ME (4–6 paragraphs) */
+#about{padding:120px 20px}
+.about-card{
+  max-width:1000px;margin:auto;
+  background:#fff;
+  padding:60px;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+.about-card h2{
+  font-size:36px;margin-bottom:24px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.about-card p{
+  margin-bottom:16px;
+  color:#333;
+}
+
+/* SKILLS & EXPERIENCE (LIGHT PURPLE BG) */
+#skills{
+  padding:140px 20px;
+  background:var(--light-purple);
+}
+.skills-wrap{
+  max-width:1200px;margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:90px;
+  align-items:center;
+}
+.skills-left h2{
+  font-size:40px;margin-bottom:20px;
+}
+.skills-left h2 span{
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.skills-left p{color:var(--grey);margin-bottom:14px}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+.skill-card{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  transition:.4s;
+}
+.skill-card:hover{transform:translateY(-12px)}
+.skill-icon{
+  width:48px;height:48px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+/* WHAT I DO */
+#services{
+  padding:120px 20px;
+  background:#fff;
+}
+.what-wrap{
+  max-width:1100px;margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:70px;
+}
+.what-card{
+  background:#fff;
+  padding:30px 34px;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  border-left:5px solid var(--primary);
+  margin-bottom:20px;
+}
+
+/* WORKS */
+#works{
+  padding:120px 20px;
+  background:#f7f8fc;
+}
+.section-title{
+  text-align:center;
+  font-size:42px;
+  font-weight:700;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.section-sub{
+  max-width:720px;
+  margin:16px auto 70px;
+  text-align:center;
+  color:var(--grey);
+}
+.works-grid{
+  max-width:1200px;margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:34px;
+}
+.work-card{
+  background:#fff;
+  padding:34px;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+}
+.work-tag{
+  font-size:12px;
+  font-weight:600;
+  padding:6px 14px;
+  border-radius:20px;
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:#fff;
+  display:inline-block;
+  margin-bottom:14px;
+}
+
+/* PURPLE PROJECT BOX (AFTER WORKS) */
+.project-cta{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  text-align:center;
+  padding:90px 20px;
+}
+.project-cta h2{font-size:34px;margin-bottom:14px}
+.project-cta p{max-width:700px;margin:0 auto 26px}
+.project-cta a{
+  background:#fff;
+  color:var(--primary);
+  padding:14px 32px;
+  border-radius:6px;
+  font-weight:600;
+}
+
+/* CONTACT */
+#contact{padding:140px 20px}
+.contact-box{
+  max-width:1000px;margin:auto;
+  background:#fff;
+  padding:60px;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+input,textarea{
+  width:100%;
+  padding:14px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  margin-bottom:14px;
+}
+button{
+  background:var(--primary);
+  color:#fff;
+  padding:14px 32px;
+  border:none;
+  border-radius:6px;
+  font-weight:500;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .skills-wrap,.what-wrap,.contact-grid{grid-template-columns:1fr}
+  .hero h1{font-size:42px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">What I Do</a>
+    <a href="#works">Works</a>
+    <a href="#contact" class="contact-btn">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Hello, I'm Dharshini E</h1>
+  <p>Aspiring Business Analyst & AI / Data Science student.</p>
+  <p>Focused on data-driven insights and user-centered digital solutions.</p>
+  <a href="#contact" class="btn">Say Hello</a>
+</section>
+
+<section id="about">
+  <div class="about-card">
+    <h2>About Me</h2>
+    <p>I am pursuing B.Tech in Computer Science (AI & Data Science) with a CGPA of 8.78.</p>
+    <p>I have a strong interest in business analysis, artificial intelligence, and user experience design.</p>
+    <p>I enjoy transforming raw data into meaningful insights through analytics and visualization.</p>
+    <p>My academic journey has strengthened my skills in Python, SQL, Power BI, and UI/UX tools.</p>
+    <p>I aim to build intelligent, scalable solutions that create measurable impact.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="skills-wrap">
+    <div class="skills-left">
+      <h2><span>Skills & Experience</span></h2>
+      <p>Strong foundation in AI, Data Science, and UI/UX.</p>
+      <p>Hands-on experience with Python, SQL, C++, Power BI, Figma, and Canva.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon">1</div><h4>Research</h4><p>Understanding problems and requirements.</p></div>
+      <div class="skill-card"><div class="skill-icon">2</div><h4>Analyze</h4><p>Deriving insights using data and AI.</p></div>
+      <div class="skill-card"><div class="skill-icon">3</div><h4>Design</h4><p>Creating intuitive user interfaces.</p></div>
+      <div class="skill-card"><div class="skill-icon">4</div><h4>Launch</h4><p>Delivering reliable solutions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="what-wrap">
+    <div>
+      <h2>What I Do?</h2>
+      <p>I design, analyze, and build intelligent digital solutions.</p>
+    </div>
+    <div>
+      <div class="what-card"><h4>User Experience (UX)</h4><p>Research-driven, intuitive experiences.</p></div>
+      <div class="what-card"><h4>User Interface (UI)</h4><p>Clean, modern visual systems.</p></div>
+      <div class="what-card"><h4>AI & Web Development</h4><p>Python-based intelligent applications.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <h2 class="section-title">Works & Projects</h2>
+  <p class="section-sub">A showcase of my academic and personal projects</p>
+
+  <div class="works-grid">
+    <div class="work-card"><span class="work-tag">AI</span><h3>FitSense AI</h3></div>
+    <div class="work-card"><span class="work-tag">Data</span><h3>Sales Dashboard</h3></div>
+    <div class="work-card"><span class="work-tag">UI/UX</span><h3>Portfolio Design</h3></div>
+    <div class="work-card"><span class="work-tag">Python</span><h3>Student Analyzer</h3></div>
+    <div class="work-card"><span class="work-tag">CRM</span><h3>CRM Tool</h3></div>
+    <div class="work-card"><span class="work-tag">SQL</span><h3>DBMS Project</h3></div>
+  </div>
+</section>
+
+<section class="project-cta">
+  <h2>Do you have a Project Idea?</h2>
+  <p>Let's discuss your project and bring your ideas to life.</p>
+  <a href="#contact">Let's Discuss →</a>
+</section>
+
+<section id="contact">
+  <div class="contact-box">
+    <h2>Let's Discuss Your Project</h2>
+    <div class="contact-grid">
+      <div>
+        <p>📍 Chennai, India</p>
+        <p>📧 your@email.com</p>
+        <p>📞 +91 XXXXXXXXXX</p>
+      </div>
+      <div>
+        <input placeholder="Name">
+        <input placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+:root {
+    --primary: #8b3dff;
+    --secondary: #ff65d8;
+    --dark: #132238;
+    --grey: #5f6c7b;
+    --white: #ffffff;
+    --shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+    --light-purple: #f3eaff;
+
+    /* Layout */
+    --container-max: 1200px;
+    --section-padding: 120px 20px;
+}
